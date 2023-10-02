@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="{% static "css/about.css" %}">
+    <title>About</title>
+
+</head>
+<body>
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Password Generator</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav-rigth">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="acercade">
+            <h1>ABOUT</h1>
+
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolore molestiae magnam eos, quia unde tempore, error aspernatur iusto soluta ipsam magni ullam harum fuga reiciendis iure perferendis quasi non.
+            Omnis consequatur adipisci dolore eos voluptates labore delectus, explicabo fuga? Maxime dolorum veritatis quo. Sapiente dignissimos consectetur corrupti. Repellat fugiat non, consequatur magni reiciendis cupiditate consequuntur provident doloremque ullam expedita.
+            Esse laborum fuga ipsum aspernatur, quod numquam iure, maxime quas id facere sapiente dolore molestias et veritatis consequuntur aperiam tempore libero, cum culpa! Ducimus alias nam sunt libero earum sapiente!</P>
+    
+        </section>
+       
+    </main>
+
+    <footer>
+        <ul class="footer">
+            <li>
+                By Alder
+            </li>
+            <li>
+                2023
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

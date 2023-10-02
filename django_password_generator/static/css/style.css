@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{  /* definimos la congiguracion general del espacio "pantalla" */
+    font-size: 1.8rem;
+    background-color: #393d42;
+    display: flex;
+    flex-direction: column;  /* utilizamos un arreglo de columna */
+    justify-content: space-between; /* todos los contenedores internos "header,main y footer" esten distribuidos equal */
+    flex-wrap: wrap; /* para que todos los elementos hijos tengan un orden 1,2,3,4... sin desbordarse */
+   
+}
+
+header {  /* configuracion primaria del header */
+    width: 100%;
+    min-width: 375px;
+    height: 10vh;
+    min-height: 65px; /* definimos un minimo de altura para generar un scroll al reducir la pantalla */
+    display: flex;
+    background-color: #1f2124; 
+}
+
+nav a { /* configuracion de estilos del ancla */
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #f9db5c;
+    font-weight: bolder;
+    transition: 0.5s ease;
+
+}
+
+ul { /* congifuracion de la lista desordenada */
+    list-style: none;
+}
+
+header nav{ /* configuracion del contendero nav */
+    display: flex;
+
+}
+
+header a:hover {
+    color: #ffff94;
+    text-shadow: 0 0 20px #ffff94,
+                 0 0 20px #f9db5c,
+                 0 0 60px #f9db5c,
+                 0 0 150px #f9db5c;
+
+}
+
+.nav-left{ /* configuracion del nav izquierdo */
+    display: flex;
+    width: 50%;
+    min-width: 187.5px;
+    height: auto; 
+    justify-content: flex-start;  
+    align-items: center;
+}
+
+.nav-rigth{ /* configuracion del nav derecho */
+    display: flex;
+    width: 50%;
+    min-width: 187.5px;
+    height: auto;
+    justify-content: flex-end;  
+    align-items: center;
+
+}
+
+
+.nav-left a{ /* configuracion de las anclas del navegador izquierdo */
+    padding-left: 3rem;
+}
+
+.nav-rigth a{ /* configuracion de las anclas del navegador izquierdo */
+    padding-right: 3rem;
+}
+
+main {  /* configuracion general del espacio main */
+    height: 80vh;
+    min-height: 340px; /* definimos un minimo de altura para generar un scroll al reducir la pantalla */
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    
+    /* overflow: auto; */
+    
+
+}
+
+form { /* configuracion del elemento form */
+    background-color: #6a6e73;
+    width: 60vw;
+    min-width: 330px;
+    max-width: 400px;
+    height: auto;
+    min-height: 331.5px;
+    border-radius: 1rem;
+    border: 1px solid burlywood;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    box-shadow: 0 0 5px #ffff94,
+                 0 0 10px #f9db5c,
+                 0 0 15px #f9db5c;
+    
+    
+   
+}
+
+main h1 { /* configuracion del titulo */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center; 
+    font-size: 2.7rem;
+    
+}
+
+
+
+main .input { /* configuracion de todos los inputs y labels mediante la clase input */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+main div label { /* configuracion de los labels de cada input */
+    margin-left: 1rem;
+    font-weight: bolder;
+    
+}
+
+
+
+main div input{ /* configuracion de la seccion select e inputs (cuadros) */
+    margin-right: 5.5rem;
+    
+}
+
+
+
+footer { /* configuracion gral del footer */
+    width: 100%;
+    height: 10vh;
+    min-height: 65px; /* definimos un minimo de altura para generar un scroll al reducir la pantalla */
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+footer ul{ /* configuracion de la lista en footer */
+    display: flex;
+    list-style: none;
+}
+
+footer li{ /* configuracion de las anclas de cada lista   */
+    font-size: 1.3rem;
+    color: #f9db5c;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+
+
+/* ######################### configuracion de checkbox y select#################*/
+/* https://www.youtube.com/watch?v=y93M3RoKQUE   (referencia para checkbox) */
+
+.check input[type="checkbox"] {
+   appearance: none;
+   -webkit-appearance: none;
+   height: 20px;
+   width: 20px;
+   background-color: #d5d5d5;
+   border-radius: 5px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   transition: 0.5s ease;
+}
+
+.check input[type="checkbox"]:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 18px;
+    color:#1f2124;
+    display: none;
+    
+}
+
+.check input[type="checkbox"]:hover {
+    background-color: #f9db5c;
+    box-shadow: 0 0 5px #f9db5c,
+                0 0 20px #f9db5c,
+                0 0 60px #f9db5c,
+                0 0 150px #f9db5c;
+
+}
+
+.check input[type="checkbox"]:checked {
+    background-color: #f9db5c /* #efb810 */;
+    box-shadow: 0 0 5px #f9db5c,
+                0 0 20px #f9db5c,
+                0 0 60px #f9db5c,
+                0 0 150px #f9db5c;
+}
+
+.check input[type="checkbox"]:checked::after {
+   display: block;
+   box-shadow: 0 0 5px #f9db5c,
+               0 0 20px #f9db5c,
+               0 0 60px #f9db5c,
+               0 0 150px #f9db5c;
+
+}
+
+
+/* https://www.youtube.com/watch?v=R-1Hh--SrX0  (referencia para "selection") */
+
+main form select{ /* reseteamos confirguraciones por default */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border:0 !important ;
+    background-color: #ffff94;
+    background-image: none;
+    font-weight: bolder;
+
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+main form div .selectsection {
+    position: relative;
+    display: flex;
+    width: 16rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    line-height: 3;
+    background-color: #6a6e73;
+    overflow: hidden;
+    border-radius: 0.5rem;
+   
+}
+
+main form select{
+    flex: 1;
+    padding: 0 0.2rem;
+    color: black;
+    cursor: pointer;
+    
+    
+}
+
+main form div .selectsection::after {
+    content: "\25BC";
+    font-size: 9px;
+    color: #d5d5d5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.8rem;
+    background-color: #393d42;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.5s all ease;
+
+}
+
+main form div .selectsection:hover::after {
+    color: black;
+    background-color: #f9db5c;
+    box-shadow: 0 0 20px #f9db5c,
+                0 0 60px #f9db5c,
+                0 0 150px #f9db5c,
+                0 0 200px #f9db5c;
+                
+
+
+}
+
+/* ############## button ################# */
+main button{ /* configuracion del boton */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    background-color: #f9db5c;
+    border: none;
+    outline: none;
+    height: 4rem;
+    width: 15rem;
+    border-radius: 2rem;
+    font-weight: bolder;
+    transition: 0.5s ease;
+    
+}
+
+main button:hover {
+    cursor: pointer;
+    background-color: #f9db5c;
+    box-shadow: 0 0 5px #f9db5c,
+                0 0 20px #f9db5c,
+                0 0 40px #f9db5c;
+
+
+}

@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator V1</title>
+    <link  type="text/css" rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> {% comment %} importamos una libreria de ña web para utilizar una imagen {% endcomment %}
+</head>
+<body>
+    <header>
+        <nav class="nav-left">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Password Generator</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav-rigth">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form action="{% url 'password' %}"> {% comment %} creamos un formulario {% endcomment %}
+            <h1>Password Generator V1</h1>
+            
+            <div class= "input">
+                <label for="length">Select the length of your password:</label> {% comment %} numero de caracteres a utilizar {% endcomment %}
+                <div class="selectsection">
+                    <select name="length" id="length">
+                        <option value="6">6 Characters</option>
+                        <option value="7">7 Characters</option>
+                        <option value="8">8 Characters</option>
+                        <option value="9">9 Characters</option>
+                        <option value="10">10 Characters</option>
+                        <option value="11">11 Characters</option>
+                        <option value="12">12 Characters</option>
+                        <option value="13">13 Characters</option>
+                    </select>
+                </div>
+              
+            </div>
+            
+            <div class= "input check">
+                <label for="uppercase">Uppercase:</label> {% comment %} para caracteres especiales {% endcomment %}
+                <input type="checkbox" name="uppercase" id="uppercase">
+            </div>
+            
+
+            <div class= "input check">
+                <label for="special">Special Characters:</label> {% comment %} creamos una opcion para utilizar caracteres especilaes {% endcomment %}
+                <input type="checkbox" name="special" id="special">
+            
+            </div>
+            
+            <div class= "input check">
+                <label for="numbers">Numbers:</label> {% comment %} creamos una opcion para utilizar numeros {% endcomment %}
+                <input type="checkbox" name="numbers" id="numbers">
+            </div>
+            
+            <div class="boton">
+                <button>Generate Password</button>
+            </div>
+
+            
+        </form>
+
+    </main>
+    <footer>
+        <ul class="footer">
+            <li>
+                By Alder
+            </li>
+            <li>
+                2023
+            </li>
+        </ul>
+    </footer>
+
+</body>
+</html>
