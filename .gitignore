@@ -364,4 +364,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#prueba para comit
+
 # End of https://www.toptal.com/developers/gitignore/api/python,git,venv,django,linux,macos,windows
