@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-(_v49^#8ihefy(sf7zsg*gkz&=ba%c15f0ln!4^*v+k_$3)qjp
 #DEBUG = True
 DEBUG = False
 
+#ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ["AlderMtz.pythonanywhere.com"] ###configuracion de la direccion de alojamiento.
 
 
@@ -122,6 +123,8 @@ STATIC_URL = 'static/'
 
 #####################
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'django_password_generator/static'),)
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #aqui unimos la direccion del sistema operativo con (la direccion base, y la ubicacion de la carpeta css)
 #####################
 
