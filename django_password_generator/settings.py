@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(_v49^#8ihefy(sf7zsg*gkz&=ba%c15f0ln!4^*v+k_$3)qjp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = ['AlderMtz.pythonanywhere.com'] ###configuracion de la direccion de alojamiento.
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['AlderMtz.pythonanywhere.com'] ###configuracion de la direccion de alojamiento.
 
 
 # Application definition
