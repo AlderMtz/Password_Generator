@@ -76,6 +76,8 @@ header a:hover {
 
 
 .nav-left a{ /* configuracion de las anclas del navegador izquierdo */
+    display: flex;
+    justify-content: center;  
     padding-left: 1.5rem;
 }
 
